@@ -1,0 +1,53 @@
+/* Ensure full page background is white */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style the header with a blue background and white text */
+.header {
+    background-color: #2E75B6; /* Blue */
+    width: 100%; /* Full width */
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Style the h2 inside the header */
+.header h2 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Style the table */
+.table {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style table header */
+.thead-dark th {
+    background-color: #2E75B6; /* Dark blue */
+    color: white;
+}
+
+/* Style table rows */
+.table tbody tr:hover {
+    background-color: #e3f2fd; /* Light blue on hover */
+}
+
+/* Style the 'Go Back' button */
+.btn-primary {
+    background-color: #2E75B6;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #1C4E80; /* Slightly darker blue */
+}

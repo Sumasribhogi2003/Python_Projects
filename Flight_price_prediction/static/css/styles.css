@@ -1,0 +1,87 @@
+body {
+    background: url("/static/images/giphy1.gif") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    background-size: 100% auto;
+
+}
+
+
+
+.navbar {
+    background-color: #2E75B6;
+}
+
+/* styles.css */
+
+.center-text {
+    display: block; /* Ensure it behaves as a block element */
+    width: 100%; /* Take up full width of its container */
+    text-align: center; /* Center-align the text */
+    font-size: 40px; /* Increase font size */
+    font-weight: bold; /* Make font bold */
+    color: #ffffff; /* Text color (white) */
+    padding: 15px 0; /* Padding top and bottom */
+    margin: 0; /* Remove default margin */
+}
+
+
+a {
+    color: #f1f9f9;
+}
+
+a:hover {
+    color: #f0f0f0;
+  }
+
+
+  .row {
+    margin-bottom: 2px; /* Reduce space between rows */
+}
+
+.card {
+    padding: 10px; /* Reduce padding inside the card */
+    margin-bottom: 5px; /* Reduce margin between cards */
+}
+
+.card-body {
+    padding: 10px; /* Reduce padding inside card body */
+}
+
+h5.card-title {
+    margin-bottom: 2px; /* Reduce space below card title */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 90px; /* Adjust as needed */
+}
+
+.navbar .navbar-header {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Ensures full width */
+}
+
+.navbar .navbar-brand {
+    font-size: 30px; 
+    font-weight: bold;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+
+
+.btn-custom {
+    background-color: #2E75B6 !important;
+    color: white !important;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #2E75B6 !important; /* Darker shade for hover effect */
+    color: white !important;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Image Generator</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script>
+        function generateImage() {
+            fetch("/", { method: "POST" })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("recognizedText").innerText = "Recognized: " + data.text;
+                    document.getElementById("generatedImage").src = data.image_path;
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Speech-to-Image Generator</h1>
+        <button class="generate-button" onclick="generateImage()">Speak & Generate</button>
+        <p id="recognizedText" class="recognized-text"></p>
+        <div class="image-container">
+            <img id="generatedImage" src="" alt="Generated Image">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h2>Prediction History</h2>
+    </div>
+
+    <div class="container mt-4">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Stops</th>
+                    <th>Airline</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Predicted Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.Departure | replace("T", " ") }}</td>
+                    <td>{{ prediction.Arrival | replace("T", " ") }}</td>
+                    <td>{{ prediction.Stops }}</td>
+                    <td>{{ prediction.Airline }}</td>
+                    <td>{{ prediction.Source }}</td>
+                    <td>{{ prediction.Destination }}</td>
+                    <td>{{ prediction.Price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Back Button -->
+        <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+
+</body>
+</html>
